@@ -6,7 +6,8 @@ import {
 } from 'react-native';
 
 class Title extends Component {
-    render() {return (
+    render() {
+      return (
             <Text>标题</Text>
         );
     }
