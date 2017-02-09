@@ -32,6 +32,7 @@ export default class AwesomeProject extends Component {
               返回
             </Text>
           </TouchableOpacity>
+
           <Text style={styles.title}>
             求吐槽
           </Text>
@@ -45,8 +46,8 @@ export default class AwesomeProject extends Component {
         </View >
 
         <View style={styles.content}>
-          <Title />
-          <Subtitle />
+          <Title style={styles.testTitle} />
+          <Subtitle style={styles.testTitle} />
           <Value title='row' value={{flexDirection:'row'}}>
             {Item}
           </Value>
@@ -73,7 +74,6 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-    alignItems: 'center',
     backgroundColor: '#F0F0F0',
   },
   back: {
@@ -85,6 +85,12 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
     color: '#FFFFFF',
+  },
+  testTitle: {
+    fontSize: 20,
+    justifyContent: 'center',
+    textAlign: 'center',
+    color: '#FF0000',
   },
 });
 
