@@ -5,7 +5,7 @@ import {
     Navigator
 } from 'react-native';
 
-class AppNavigator extends Component {
+export default class AppNavigator extends Component {
     render() {
         return (
             <Navigator
@@ -26,5 +26,3 @@ function renderScene(route, navigator) {
       );
     }
 }
-
-module.exports = AppNavigator;

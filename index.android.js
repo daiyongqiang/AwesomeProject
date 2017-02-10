@@ -4,7 +4,7 @@
  * @flow
  */
 
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
   AppRegistry,
   StyleSheet,
@@ -12,10 +12,12 @@ import {
   View,
   Image,
   TouchableOpacity,
+  Navigator,
 } from 'react-native';
 
-import { Title, Subtitle, } from './js/Title';
-import { Value, Item, } from './js/Value';
+import {Title, Subtitle} from './js/Title';
+import {Value, Item} from './js/Value';
+import FlexDirectionTest from './js/FlexDirectionTest';
 
 export default class AwesomeProject extends Component {
 
@@ -24,10 +26,20 @@ export default class AwesomeProject extends Component {
   }
 
   render() {
+    <Navigator
+      initialRoute={{name:"FlexDirectionTest", component: FlexDirectionTest}}
+      configureScene={(route) => {
+            return Navigator.SceneConfigs.VerticalDownSwipeJump;
+          }}
+      renderScene={(route, navigator) => {
+            let Component = route.component;
+            return <Component {...route.params} navigator = {navigator}/>
+    }}/>
+
     return (
       <View style={styles.container}>
         <View style={styles.bar}>
-          <TouchableOpacity >
+          <TouchableOpacity>
             <Text style={styles.title}>
               返回
             </Text>
@@ -46,8 +58,8 @@ export default class AwesomeProject extends Component {
         </View >
 
         <View style={styles.content}>
-          <Title style={styles.testTitle} />
-          <Subtitle style={styles.testTitle} />
+          <Title style={styles.testTitle}/>
+          <Subtitle style={styles.testTitle}/>
           <Value title='row' value={{flexDirection:'row'}}>
             {Item}
           </Value>

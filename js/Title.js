@@ -1,24 +1,34 @@
 'use strict'
 
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
-    Text
+  StyleSheet,
+  Text,
 } from 'react-native';
 
 class Title extends Component {
-    render() {
-      return (
-            <Text>标题</Text>
-        );
-    }
+  render() {
+    return (
+      <Text style={styles.testTitle}>标题</Text>
+    );
+  }
 }
 
 class Subtitle extends Component {
-    render() {
-        return (
-            <Text>副标题</Text>
-        );
-    }
+  render() {
+    return (
+      <Text style={styles.testTitle}>副标题</Text>
+    );
+  }
 }
 
-module.exports = { Title, Subtitle };
+const styles = StyleSheet.create({
+  testTitle: {
+    fontSize: 20,
+    justifyContent: 'center',
+    textAlign: 'center',
+    color: '#FF0000',
+  },
+});
+
+module.exports = {Title, Subtitle};
