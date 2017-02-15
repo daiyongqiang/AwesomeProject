@@ -4,7 +4,7 @@
 
 'use strict'
 
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
   View,
   StyleSheet,
@@ -17,7 +17,21 @@ import {
 import {Title, Subtitle} from './Title';
 import {Value, Item} from './Value';
 
+import Test002 from './Test002';
+
 export default class Test001 extends Component {
+
+  goToSecondComponentPress() {
+    const {navigator} = this.props;
+    if (navigator) {
+      //navigator.push 传入name和你想要跳的组件页面
+      navigator.push({
+        name: "Test002",
+        component: Test002
+      });
+    }
+  }
+
   render() {
     return (
       <View style={styles.container}>
