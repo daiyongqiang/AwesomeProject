@@ -15,6 +15,14 @@ class Circle extends Component {
   }
 }
 
+class SmallCircle extends Component {
+  render() {
+    return (
+      <View style={styles.smallCircleShape}/>
+    );
+  }
+}
+
 class Value extends Component {
   render() {
     var value =
@@ -55,10 +63,17 @@ const styles = StyleSheet.create({
     width: 20,
     margin: 1
   },
+  smallCircleShape: {
+    backgroundColor: '#527FE4',
+    borderRadius: 16 / 2,
+    height: 16,
+    width: 16,
+    margin: 1
+  },
   valueText: {
     textAlign: 'center',
     color: '#333333',
   },
 });
 
-module.exports = {Value, Item};
+module.exports = {Value, Item, Circle, SmallCircle};

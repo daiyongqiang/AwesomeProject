@@ -15,6 +15,8 @@ import {
   BackAndroid,
 } from 'react-native';
 
+import {Circle, SmallCircle} from './Value';
+
 export default class Test002 extends Component {
 
   componentDidMount() {
@@ -37,53 +39,17 @@ export default class Test002 extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View>
-          <Text>Text1</Text>
-          <Text>Text2</Text>
-          <Text>Text3</Text>
-          <Text>Text4</Text>
-        </View>
-        <View>
-          <Text>Text1</Text>
-          <Text>Text2</Text>
-          <Text>Text3</Text>
-          <Text>Text4</Text>
-        </View>
-
-        <View>
-          <Text>Text1</Text>
-          <Text>Text2</Text>
-          <Text>Text3</Text>
-          <Text>Text4</Text>
-        </View>
-
-        <View>
-          <Text>Text1</Text>
-          <Text>Text2</Text>
-          <Text>Text3</Text>
-          <Text>Text4</Text>
-        </View>
-
-        <View>
-          <Text>Text1</Text>
-          <Text>Text2</Text>
-          <Text>Text3</Text>
-          <Text>Text4</Text>
-        </View>
-
-        <View>
-          <Text>Text1</Text>
-          <Text>Text2</Text>
-          <Text>Text3</Text>
-          <Text>Text4</Text>
-        </View>
-
-        <View>
-          <Text>Text1</Text>
-          <Text>Text2</Text>
-          <Text>Text3</Text>
-          <Text>Text4</Text>
-        </View>
+        <Circle />
+        <Circle />
+        <Circle />
+        <Circle />
+        <Circle />
+        <Circle />
+        <Circle />
+        <Circle />
+        <Circle />
+        <Circle />
+        <SmallCircle />
       </View>
     );
   }
@@ -91,9 +57,11 @@ export default class Test002 extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'column',
+    flexDirection: 'row-reverse', //当值为row时，主轴为左右方向，交叉轴为上下方向；当为column时，主轴为上下方向，交叉轴为左右方向
     flex: 1,
     backgroundColor: '#D80000',
     flexWrap: 'wrap',
+    alignItems: 'center', //交叉轴方向对齐方式
+    justifyContent: 'center', //主轴方向对齐方式
   }
 });
